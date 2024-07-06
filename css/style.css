@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#hero-section {
+    background-image: url(../image/people-practicing-social-integration-workspace.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.logo {
+    filter: brightness(0) invert(0);
+    max-height: 20em;
+    max-width: 25%;
+}
+
+nav {
+    max-width: 60%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #777777;
+    border: none;
+    padding-bottom: 2px;
+    border-bottom: 5px solid #777777;
+    transition: linear 200ms;
+}
+
+.mobile-logo {
+    display: none;
+}
+
+#menu-bar {
+    display: none;
+}
+
+header label {
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
+
+.heading-container{
+    padding: 50px;
+    margin: 30px;
+    margin-top: 60px;
+}
+
+.heading{
+    font-size: 60px;
+    color: #222222;
+}
+
+.sub-heading{
+    color: #444444;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.aside{
+    padding: 50px;
+    margin: 30px;
+    margin-top: 5px;
+}
+
+.join-link{
+    margin-top: 60px;
+    color: #fff;
+}
+
+.join-link{
+    color: #222222;
+    font-weight: 600;
+}
+
+.course {
+    text-align: center;
+    place-content: ce;
+    color: #222222;
+    position: relative;
+    top: -40px;
+    left: 42%;
+}
+
+.courses-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    flex-wrap: wrap;
+    padding: 50px;
+  }
+  
+  .course-category {
+    flex: 1 1 30%;
+    margin: 5px;
+  }
+  
+  .course-category h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .course-category ul {
+    list-style-type: disc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .course-category ul ul {
+    list-style-type: circle;
+    margin-left: 20px;
+  }  
+
+  #about-container{
+    min-width: 100%;
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    min-height: 45vh;
+    background-color: #777777;
+    display: flex;
+  }
+
+  .about-section{
+    flex: 1 1 30%;
+  }
+
+  .about-section h2{
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+
+  .about-image{
+    padding: 30px;
+    min-width: 35em;
+    max-height: 45vh;
+  }
+
+  #contact-part {
+    max-height: 50vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); 
+    color: #fff;
+    display: flex;
+    align-items: center; 
+    padding: 30px;
+  }
+  
+  .contact-image {
+    min-width: 30em; 
+    max-height: 40vh;
+    margin-right: 50px; 
+  }
+  
+  .contact-info {
+    flex: 1; 
+    line-height: 50px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #777;
+  }
+
+  p a{
+    color: lightblue;
+  }
+
+  p a:hover{
+    color: blue;
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 1023px){
+    .courses-container {
+        flex-wrap: wrap;
+        padding: 50px;
+        font-size: larger;
+      }
+
+      .course-category {
+        flex: 1 1 100%;
+        margin: 5px;
+      }
+
+      #about-container{
+        flex-wrap: wrap;
+        min-height: 35vh;
+        padding: 40px;
+      }
+
+      .about-image{
+        display: none;
+      }
+
+      .contact-info {
+        line-height: 35px;
+      }
+  }
+
+@media screen and (max-width: 764px) {
+    .mobile-logo {
+        display: block;
+        max-height: 4em;
+        max-width: 15%;
+        padding: 0;
+        margin: 0;
+    }
+
+    header {
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    header label {
+        display: block;
+        order: 1;
+    }
+
+    label:active{
+        color: #0077b6;
+    }
+
+    nav ul li a{
+        color:#fff;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    header nav {
+        position: absolute;
+        top: 14%; left: 40%; right: 0;
+        background-color: rgb(26, 27, 27);
+        display: none;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+    }
+
+    header nav ul li:last-child{
+        border-bottom: 0;
+    }
+
+    header nav ul li:hover:first-child{
+        background-color: rgba(43, 44, 44, 0.9);
+    }
+
+    header nav ul li:hover:nth-child(2){
+        background-color: rgba(43, 44, 44, 0.9);
+    }
+
+    header nav ul li:hover:nth-child(3){
+        background-color: rgba(43, 44, 44, 0.9);
+    }
+
+    header nav ul li:hover:last-child{
+        background-color: rgba(43, 44, 44, 0.9);
+    }
+
+    #menu-bar:checked ~ nav {
+        display: flex;
+    }
+
+    .heading-container{
+        margin-top: 0px;
+    }
+    
+    .heading{
+        font-size: 52px;
+        font-weight: 720;
+        color: #111111;
+    }
+    
+    .sub-heading{
+        color: #111111;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .aside{
+        margin-top: -50px;
+        max-height: 5px;
+    }
+
+    .join-link{
+        color: #222222;
+        font-weight: 600;
+    }
+
+    .logo {
+        filter: brightness(0) invert(0);
+    }
+
+    body{
+        background-size: cover;
+    }
+
+    .course {
+    text-align: center;
+    color: #222222;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+    .courses-container {
+        background-color: lightgray ;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #about-container{
+        flex-direction: column;
+      }
+
+      .about-image{
+        padding: 20px;
+        min-width: 15em;
+        max-height: 32vh;
+      }
+
+      .contact-image {
+        padding: 10px;
+        min-width: 18em;
+        max-height: 32vh;
+      }
+
+      #contact-part {
+        min-height: 60vh;
+        flex-direction: column;
+      }
+
+      .contact-info {
+        line-height: 35px;
+      }
+
+      nav ul li a:hover {
+        padding-bottom: 0px;
+        border-bottom: 0;
+        transition: linear 0ms;
+    }
+}
