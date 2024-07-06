@@ -8,6 +8,7 @@
 </head>
 <body>
     <div id="hero-section">
+      <div class="overlay">
     <header>
         <img class="mobile-logo" src="./image/mobile-logo.png" alt="mobile-logo">
         <img class="logo" src="./image/horizontal-logo.png" alt="horizontal-logo">
@@ -24,10 +25,11 @@
     </header>
         <div class="heading-container">
             <h1 class="heading">Welcome to...<br>Real Sensor Tecnology</h1>
-            <p class="sub-heading">Empowering your future with essential computer skills</p>
+            <p class="sub-heading"><em>Empowering your future with essential computer skills</em></p>
         </div>
         <div class="aside">
-            <a class="join-link" href="#">Join Us Today</a>
+            <a class="join-link" href="#footer"><em>Join Us Today</em></a>
+        </div>
         </div>
     </div>
     <main id="main-container">
@@ -41,13 +43,13 @@
                     <li>Understanding hardware and software</li>
                     <li>Basic troubleshooting and maintenance</li>
                   </ul>
-                </li>
+                </li> <br>
                 <li>Internet and Email
                   <ul>
                     <li>Browsing the web</li>
                     <li>Setting up and managing email accounts</li>
                   </ul>
-                </li>
+                </li> <br>
                 <li>Microsoft Office Suite
                   <ul>
                     <li>MS Word: Document creation and formatting</li>
@@ -66,13 +68,13 @@
                     <li>Introduction to programming concepts</li>
                     <li>Writing your first programs in Python</li>
                   </ul>
-                </li>
+                </li> <br>
                 <li>Web Development
                   <ul>
                     <li>HTML, CSS, and JavaScript</li>
                     <li>Building and deploying simple websites</li>
                   </ul>
-                </li>
+                </li> <br>
                 <li>Data Analysis
                   <ul>
                     <li>Using Excel for data analysis</li>
@@ -90,13 +92,13 @@
                     <li>Advanced document formatting and design</li>
                     <li>Collaboration and review tools</li>
                   </ul>
-                </li>
+                </li> <br>
                 <li>Advanced MS Excel
                   <ul>
                     <li>Complex formulas and functions</li>
                     <li>Data analysis and pivot tables</li>
                   </ul>
-                </li>
+                </li> <br>
                 <li>Advanced MS PowerPoint
                   <ul>
                     <li>Advanced presentation design</li>
@@ -122,12 +124,31 @@
           </div>        
     </main>
     <footer id="footer">
-      <div id="contact-part">
-        <div>
-          <img class="contact-image" src="./image/5124556.jpg" alt="">
+      <div id="contact-container">
+        <div class="contact-form">
+          <h2>Send us a message</h2> <br>
+          <form action="/submit" method="post">
+            <div class="form-group">
+            <label for="name"></label>
+            <input id="name" placeholder="Name" type="text" name="name" required>
+            </div>
+            <div class="form-group">
+            <label for="email"></label>
+            <input id="email" placeholder="Email" type="email" name="email" required>
+            </div>
+            <div class="form-group">
+            <label for="Subject"></label>
+            <input id="subject" type="text" placeholder="Subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message"></label>
+              <textarea placeholder="Message" name="message" id="message" required></textarea>
+            </div>
+            <button type="submit">Send</button>
+          </form>
         </div>
         <div class="contact-info">
-          <h2>Contact Us</h2>
+          <h2>Contact Us</h2> <br>
           <p>Gmail: <a href="mailto:Realsensor@gmail.com">Realsensor@gmail.com</a></p>
           <p>Phone: <a href="tel:+2348066313915">+2348066313915</a></p>
           <p>Address: <a href="https://g.co/kgs/1ZyRPnA">212 Ugbowo-Lagos Rd, Uselu, Benin City 300271, Edo</a></p>

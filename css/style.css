@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+html{
+  scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -18,6 +22,11 @@ body {
     height: 100vh;
 }
 
+.overlay{
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -26,7 +35,7 @@ header {
 }
 
 .logo {
-    filter: brightness(0) invert(0);
+    filter: brightness(0) invert(1);
     max-height: 20em;
     max-width: 25%;
 }
@@ -47,16 +56,16 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #222222;
+    color: #fff;
     font-weight: 600;
     font-size: 18px;
 }
 
 nav ul li a:hover {
-    color: #777777;
+    color: #333;
     border: none;
     padding-bottom: 2px;
-    border-bottom: 5px solid #777777;
+    border-bottom: 5px solid #333;
     transition: linear 200ms;
 }
 
@@ -83,11 +92,11 @@ header label {
 
 .heading{
     font-size: 60px;
-    color: #222222;
+    color: #fff;
 }
 
 .sub-heading{
-    color: #444444;
+    color: #fff;
     font-weight: 600;
     font-size: 19px;
 }
@@ -99,12 +108,7 @@ header label {
 }
 
 .join-link{
-    margin-top: 60px;
     color: #fff;
-}
-
-.join-link{
-    color: #222222;
     font-weight: 600;
 }
 
@@ -158,6 +162,8 @@ header label {
 
   .about-section{
     flex: 1 1 30%;
+    padding: 20px;
+    color: #fff;
   }
 
   .about-section h2{
@@ -194,18 +200,109 @@ header label {
 
   .footer-bottom {
     text-align: center;
-    margin-top: 20px;
+    padding: 25px;
     font-size: 14px;
     color: #777;
   }
 
   p a{
-    color: lightblue;
+    color: #f9f6ef;
   }
 
   p a:hover{
     color: blue;
   }
+
+  .main-contact-container{
+    display: flex;
+  }
+
+  .contact-container{
+    flex: 1 1 30%;
+  }
+
+  .contact-form{
+    background-color: #002147;
+    color: white;
+    padding: 20px;
+
+  }
+
+  #contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .contact-form, .contact-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+  }
+  
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px;
+  }
+  
+
+  .form-group{
+    margin-bottom: 15px;
+  }
+
+  .form-group input, .form-group textarea{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    margin-bottom: 10px;
+    
+  }
+
+  .form-group textarea{
+    resize: none;
+    height: 100px;
+  }
+
+  .form-group{
+    border-top: 0; border-right: 0; border-left: 0;
+    border-bottom: 1px solid #fff;
+  }
+
+  .form-group input, textarea{
+    background-color: transparent;
+    border: none;
+  }
+
+  .form-group input, textarea:focus{
+    color: white;
+    outline: none;
+  }
+
+  .form-group input:active{
+    border: none;
+  }
+
+  button{
+    width: 15%;
+    padding: 10px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+    button:hover{
+      background-color: #004494;
+    }
+
+    .contact-info{
+      background-color: orangered;
+      padding: 30px;
+      color: white;
+    }
+
   
   @media screen and (min-width: 768px) and (max-width: 1023px){
     .courses-container {
@@ -213,6 +310,10 @@ header label {
         padding: 50px;
         font-size: larger;
       }
+
+      .heading{
+        line-height: 5rem;
+    }
 
       .course-category {
         flex: 1 1 100%;
@@ -232,6 +333,10 @@ header label {
       .contact-info {
         line-height: 35px;
       }
+
+      button{
+        width: 20%;
+      }
   }
 
 @media screen and (max-width: 764px) {
@@ -241,6 +346,7 @@ header label {
         max-width: 15%;
         padding: 0;
         margin: 0;
+        filter: brightness(0) invert(1);
     }
 
     header {
@@ -315,11 +421,11 @@ header label {
     .heading{
         font-size: 52px;
         font-weight: 720;
-        color: #111111;
+        color: #fff;
     }
     
     .sub-heading{
-        color: #111111;
+        color: #fff;
         font-weight: 600;
         font-size: 18px;
     }
@@ -330,7 +436,7 @@ header label {
     }
 
     .join-link{
-        color: #222222;
+        color: #fff;
         font-weight: 600;
     }
 
@@ -353,11 +459,12 @@ header label {
     .courses-container {
         background-color: lightgray ;
         flex-direction: column;
-        text-align: center;
+        text-align: start;
     }
 
     #about-container{
         flex-direction: column;
+        padding: 20px;
       }
 
       .about-image{
@@ -385,5 +492,9 @@ header label {
         padding-bottom: 0px;
         border-bottom: 0;
         transition: linear 0ms;
+    }
+
+    button{
+      width: 20%;
     }
 }
