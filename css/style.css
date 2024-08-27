@@ -4,10 +4,69 @@ html{
   scroll-behavior: smooth;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  min-height: 100svh;
+}
+
+#container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 50px;
+  padding: 10px;
+}
+
+.box{
+  background-color: transparent;
+  color: #000;
+  border-radius: 3px;
+  font-size: 2rem;
+  padding: 20px;
+  min-height: 28rem;
+  text-align: center;
+  border: 5px solid #007bff;
+}
+
+.course-category{
+  font-size: 16px;
+  text-align: start;
+}
+
+#bck{
+  text-align: center;
+  padding: 15px;
+  font-size: 2.1rem;
+}
+
+.course-category1{
+  font-size: 16px;
+  text-align: start;
+}
+
+.advance-courses{
+  font-size: 2.1rem;
+  padding: 20px;
+  text-align: center;
+}
+
+.course-category2{
+  font-size: 16px;
+  text-align: start;
+}
+
+.ms-office-specialist{
+  font-size: 2.1rem;
+  padding: 20px;
+  text-align: center;
+}
+
+ol li{
+  margin: 10px;
 }
 
 body {
@@ -136,7 +195,17 @@ header label {
   
   .course-category h2 {
     font-size: 1.5em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+  }
+
+  .course-category {
+    flex: 1 1 30%;
+    margin: 5px;
+  }
+  
+  .course-category h2{
+    font-size: 1.5em;
+    margin-bottom: 15px;
   }
   
   .course-category ul {
@@ -156,8 +225,9 @@ header label {
     font-size: 17px;
     text-align: center;
     min-height: 45vh;
-    background-color: #777777;
+    background-color: #007bff;
     display: flex;
+    border: 10px double #fff;
   }
 
   .about-section{
@@ -213,18 +283,15 @@ header label {
     color: blue;
   }
 
-  .main-contact-container{
-    display: flex;
-  }
-
   .contact-container{
     flex: 1 1 30%;
   }
 
   .contact-form{
-    background-color: #002147;
-    color: white;
-    padding: 20px;
+    background-color: transparent;
+    color: #6c757d;
+    margin: 10px;
+    border: 3px solid #007bff;
 
   }
 
@@ -256,7 +323,6 @@ header label {
     padding: 10px;
     border: none;
     margin-bottom: 10px;
-    
   }
 
   .form-group textarea{
@@ -266,7 +332,7 @@ header label {
 
   .form-group{
     border-top: 0; border-right: 0; border-left: 0;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #6c757d;
   }
 
   .form-group input, textarea{
@@ -275,8 +341,12 @@ header label {
   }
 
   .form-group input, textarea:focus{
-    color: white;
+    color: #6c757d;
     outline: none;
+  }
+
+  .form-group textarea,input{
+    color: #6c757d;
   }
 
   .form-group input:active{
@@ -286,21 +356,24 @@ header label {
   button{
     width: 15%;
     padding: 10px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
+    background-color: transparent;
+    color: #6c757d;
+    border: 1px solid #6c757d;
     border-radius: 5px;
     cursor: pointer;
   }
 
     button:hover{
-      background-color: #004494;
+      background-color: #6c757d;
+      color: #fff;
     }
 
     .contact-info{
-      background-color: orangered;
+      background-color: #007bff;
       padding: 30px;
       color: white;
+      margin: 10px;
+
     }
 
   
@@ -323,7 +396,6 @@ header label {
       #about-container{
         flex-wrap: wrap;
         min-height: 35vh;
-        padding: 40px;
       }
 
       .about-image{
@@ -337,9 +409,32 @@ header label {
       button{
         width: 20%;
       }
+
+      #container{
+        grid-template-columns: 1fr;
+        grid-template-areas: "fc fc fc"
+        "nc nc nc" 
+        "lc lc lc";
+        row-gap: 20px;
+    }
+  
+     #container :first-child{
+        grid-area: fc;  
+        font-size: 1.2rem;
+    }
+  
+    #container :nth-child(2){
+        grid-area: nc;
+        font-size: 1.2rem;  
+    }
+  
+  #container :last-child{
+        grid-area: lc; 
+        font-size: 1.2rem; 
+    }
   }
 
-@media screen and (max-width: 764px) {
+@media screen and (max-width: 767px) {
     .mobile-logo {
         display: block;
         max-height: 4em;
@@ -464,7 +559,6 @@ header label {
 
     #about-container{
         flex-direction: column;
-        padding: 20px;
       }
 
       .about-image{
@@ -497,4 +591,44 @@ header label {
     button{
       width: 20%;
     }
-}
+
+  #container{
+      grid-template-columns: 1fr;
+      grid-template-areas: "fc fc fc"
+      "nc nc nc" 
+      "lc lc lc"
+      ;
+      row-gap: 20px;
+  }
+
+  #container :first-child{
+      grid-area: fc;  
+      font-size: 1.2rem;
+  }
+
+  #container :nth-child(2){
+      grid-area: nc;
+      font-size: 1.2rem;  
+  }
+
+  #container :last-child{
+      grid-area: lc; 
+      font-size: 1.2rem; 
+  }
+
+  #bck{   
+  font-size: 1.8rem;
+  }
+
+  #advance-courses{
+  font-size: 1.8rem;
+  }
+
+  ol li{
+  margin: 5px;
+  padding: 5px;
+  }
+
+  #ms-office-specialist{
+      font-size: 2rem;
+  }
